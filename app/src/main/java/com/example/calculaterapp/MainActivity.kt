@@ -22,11 +22,14 @@ class MainActivity : AppCompatActivity() {
     private var mediaplayer:MediaPlayer?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         //for removing status bar cool
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         textView=findViewById(R.id.textView)
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+        // for restrict the screenshot on app
 
     }
     fun ondigit(view: View){
